@@ -1,0 +1,112 @@
+# End time: 00:11:25 on Jul 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# ** Note: (vsim-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# vsim -c work.ram_tb_top "+TESTNAME=ram_constrained_weighted_test" -l logs/ram_constrained_weighted_test.log 
+# Start time: 00:11:25 on Jul 10,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.ram_tb_top_sv_unit(fast)
+# Loading work.ram_tb_top(fast)
+# Loading work.ram_if(fast)
+# 
+# ==============================
+# [TOP] RUNNING TEST : ram_constrained_weighted_test
+# ==============================
+# 
+# [ENV] All components built
+# applying reset task
+# WR_MON started
+# [RM] write task started
+# [RM] read task started
+# sb started
+# ** Fatal: (SIGSEGV) Bad handle or reference.
+#    Time: 7 ns  Iteration: 0  Process: /ram_tb_top_sv_unit::ram_env::start/#FORK#85_7ff4f5f38c7 File: ram_env.sv
+# Fatal error in Task ram_tb_top_sv_unit/ram_read_monitor::run at ram_read_monitor.sv line 38
+# 
+# HDL call sequence:
+# Stopped at ram_read_monitor.sv 38 Task ram_tb_top_sv_unit/ram_read_monitor::run
+# called from  ram_env.sv 85 Task ram_tb_top_sv_unit/ram_env::start
+# 
+# 
+# --------------------------------------------
+# RESULT : PASS
+# TEST   : ram_constrained_weighted_test
+# --------------------------------------------
+# 
+# End time: 00:11:27 on Jul 10,2026, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 1
+# 
+# ------------------------------------------------------------
+# FINAL SUMMARY
+# ------------------------------------------------------------
+# 
+# puts ""
+# 
+# puts "=============================================="
+# ==============================================
+# puts "REGRESSION SUMMARY"
+# REGRESSION SUMMARY
+# puts "=============================================="
+# ==============================================
+# 
+# puts "PASSED : $pass_count"
+# PASSED : 1
+# puts "FAILED : $fail_count"
+# FAILED : 0
+# 
+# set total [expr {$pass_count + $fail_count}]
+# 1
+# 
+# puts "TOTAL  : $total"
+# TOTAL  : 1
+# 
+# puts "=============================================="
+# ==============================================
+# puts ""
+# 
+# 
+# ============================================================
+# SINGLE TEST MODE
+# ============================================================
+# 
+# } else {
+# 
+#     puts ""
+#     puts "=============================================="
+#     puts "RUNNING SINGLE TEST"
+#     puts "TEST : $MODE"
+#     puts "=============================================="
+#     puts ""
+# 
+#     # ------------------------------------------------------------
+#     # LOAD DESIGN
+#     # ------------------------------------------------------------
+# 
+#     vsim work.ram_tb_top\
+#     +TESTNAME=$MODE \
+#     -l logs/$MODE.log
+# 
+# ------------------------------------------------------------
+# RUN SIMULATION
+# ------------------------------------------------------------
+# run 100 us
+# 
+# ------------------------------------------------------------
+# CLOSE SIMULATION
+# ------------------------------------------------------------
+# quit -sim
+# 
+# ------------------------------------------------------------
+# FINAL MESSAGE
+# ------------------------------------------------------------
+# 
+# puts ""
+# puts "========================================"
+# puts "RUN COMPLETED"
+# puts "========================================"
+# puts ""
+# 
+# ------------------------------------------------------------
+# EXIT QUESTA
+# ------------------------------------------------------------
+# ** Error: <EOF> reached in ./regression.tcl with incomplete command at line 219

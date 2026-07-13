@@ -1,0 +1,794 @@
+# ** Note: (vsim-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# vsim -c work.ram_tb_top "+TESTNAME=ram_random_test" -l logs/ram_random_test.log 
+# Start time: 00:09:42 on Jul 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# Loading sv_std.std
+# Loading work.ram_tb_top_sv_unit(fast)
+# Loading work.ram_tb_top(fast)
+# ** Error (suppressible): (vsim-8209) Virtual interface elem. 'rdata' not found in modport 'RD_MON'.
+#    Time: 0 ps  Iteration: 0  Region: /ram_tb_top_sv_unit File: ram_read_monitor.sv Line: 38
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./regression.tcl PAUSED at line 194
+# Compile of decoder_ram.sv was successful.
+# Compile of ram_env.sv was successful with warnings.
+# Compile of ram_generator.sv was successful with warnings.
+# Compile of ram_if.sv was successful.
+# Compile of ram_read_driver.sv was successful with warnings.
+# Compile of ram_read_monitor.sv was successful with warnings.
+# Compile of ram_ref_model.sv was successful with warnings.
+# Compile of ram_scoreboard.sv was successful with warnings.
+# Compile of ram_tb_top.sv was successful with warnings.
+# Compile of ram_test.sv was successful with warnings.
+# Compile of ram_transaction.sv was successful with warnings.
+# Compile of ram_write_driver.sv was successful with warnings.
+# Compile of ram_write_monitor.sv was successful with warnings.
+# 13 compiles, 0 failed with no errors.
+do regression.tcl
+# ============================================================
+# run.do
+# Professional Regression Script for RAM Verification
+# ============================================================
+# 
+# transcript on
+# 
+# ------------------------------------------------------------
+# MODE SELECTION
+# ------------------------------------------------------------
+# regression -> runs all tests
+# single test -> set MODE to testcase name
+#
+# Example:
+#   set MODE ram_random_test
+# ------------------------------------------------------------
+# set MODE regression
+# regression
+# 
+# puts "ARGV = $argv"
+# ARGV = -gui
+# puts "MODE = $MODE"
+# MODE = regression
+# 
+# ------------------------------------------------------------
+# CREATE LOG DIRECTORY
+# ------------------------------------------------------------
+# file mkdir logs
+# 
+# ------------------------------------------------------------
+# DELETE OLD WORK LIBRARY
+# ------------------------------------------------------------
+# if {[file exists work]} {
+#     puts ""
+#     puts "========================================="
+#     puts "DELETING OLD WORK LIBRARY"
+#     puts "========================================="
+#     puts ""
+#     vdel -all -lib work
+# }
+# 
+# =========================================
+# DELETING OLD WORK LIBRARY
+# =========================================
+# 
+# 
+# ------------------------------------------------------------
+# CREATE WORK LIBRARY
+# ------------------------------------------------------------
+# vlib work
+# vmap work work
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# Modifying F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf
+# 
+# ------------------------------------------------------------
+# COMPILE FILES
+# ------------------------------------------------------------
+# puts ""
+# 
+# puts "========================================="
+# =========================================
+# puts "COMPILING FILES"
+# COMPILING FILES
+# puts "========================================="
+# =========================================
+# puts ""
+# 
+# 
+# vlog ram_if.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:32 on Jul 10,2026
+# vlog -reportprogress 300 ram_if.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:32 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog decoder_ram.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:33 on Jul 10,2026
+# vlog -reportprogress 300 decoder_ram.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling module decoder_ram
+# 
+# Top level modules:
+# 	decoder_ram
+# End time: 00:10:33 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_transaction.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:33 on Jul 10,2026
+# vlog -reportprogress 300 ram_transaction.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_transaction_sv_unit
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:33 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_generator.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:33 on Jul 10,2026
+# vlog -reportprogress 300 ram_generator.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_generator_sv_unit
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:33 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_write_driver.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:34 on Jul 10,2026
+# vlog -reportprogress 300 ram_write_driver.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_write_driver_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:34 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_read_driver.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:34 on Jul 10,2026
+# vlog -reportprogress 300 ram_read_driver.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_read_driver_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:34 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_write_monitor.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:34 on Jul 10,2026
+# vlog -reportprogress 300 ram_write_monitor.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_write_monitor_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:34 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_read_monitor.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:34 on Jul 10,2026
+# vlog -reportprogress 300 ram_read_monitor.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_read_monitor_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:35 on Jul 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_ref_model.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:35 on Jul 10,2026
+# vlog -reportprogress 300 ram_ref_model.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_ref_model_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:35 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_scoreboard.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:35 on Jul 10,2026
+# vlog -reportprogress 300 ram_scoreboard.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_scoreboard_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:35 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_env.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:35 on Jul 10,2026
+# vlog -reportprogress 300 ram_env.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_env_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:35 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_test.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:36 on Jul 10,2026
+# vlog -reportprogress 300 ram_test.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_test_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:10:36 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_tb_top.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:10:36 on Jul 10,2026
+# vlog -reportprogress 300 ram_tb_top.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_tb_top_sv_unit
+# -- Compiling interface ram_if
+# -- Compiling module decoder_ram
+# -- Compiling module ram_tb_top
+# 
+# Top level modules:
+# 	ram_tb_top
+# End time: 00:10:36 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# puts ""
+# 
+# puts "========================================="
+# =========================================
+# puts "COMPILATION DONE"
+# COMPILATION DONE
+# puts "========================================="
+# =========================================
+# puts ""
+# 
+# 
+# 
+# ============================================================
+# REGRESSION MODE -> run every test, each in its own vsim
+# invocation so memory/state never leaks between tests.
+# ============================================================
+# if {$MODE == "regression"} {
+# 
+# ------------------------------------------------------------
+# FULL TEST LIST
+# ------------------------------------------------------------
+# set tests {
+#     ram_random_test
+#     ram_block_boundary_test
+#     ram_full_sweep_test
+# 
+#     ram_walking1_data_test
+#     ram_walking0_data_test
+# 
+#     ram_walking1_addr_test
+#     ram_walking0_addr_test
+# 
+#     ram_same_addr_overwrite_test
+#     ram_toggle_addr_test
+# 
+#     ram_checkerboard_test
+#     ram_block_isolation_test
+# 
+#     ram_allzero_test
+#     ram_allone_test
+# 
+#     ram_read_before_write_test
+#     ram_constrained_weighted_test
+# }
+# 
+#-------------------------------
+# PASS / FAIL COUNTERS 
+#-------------------------------
+# set pass_count 0
+# set fail_count 0
+# 
+#------------------------------
+# RUN ALL TESTS 
+#------------------------------
+#     foreach test $tests {
+# 
+#         puts ""
+#         puts "========================================="
+#         puts "RUNNING TEST: $test"
+#         puts "========================================="
+#         puts ""
+# 
+#------------------------------
+# LOAD DESIGN 
+#------------------------------
+# 
+#         vsim -c work.ram_tb_top \
+# 	+TESTNAME=$test \
+# 	-l logs/$test.log 
+#     }
+# 
+# ------------------------------------------------------------
+# RUN SIMULATION
+# ------------------------------------------------------------
+# 
+# IMPORTANT:
+# Using fixed runtime avoids popup issue caused by
+# $finish in older Questa versions
+# 
+# ------------------------------------------------------------
+# run 100 us
+# 
+# 
+# ------------------------------------------------------------
+# CHECK LOG FILE
+# ------------------------------------------------------------
+# 
+# set fp [open logs/$test.log r]
+# set logfile [read $fp]
+# close $fp
+# 
+# 
+# ------------------------------------------------------------
+# PASS / FAIL CHECK
+# ------------------------------------------------------------
+# 
+# if {[string match "*ERROR*" $logfile]} {
+# 
+#     puts ""
+#     puts "--------------------------------------------"
+#     puts "RESULT : FAIL"
+#     puts "TEST   : $test"
+#     puts "--------------------------------------------"
+#     puts ""
+# 
+#     incr fail_count
+# 
+# } else {
+# 
+#     puts ""
+#     puts "--------------------------------------------"
+#     puts "RESULT : PASS"
+#     puts "TEST   : $test"
+#     puts "--------------------------------------------"
+#     puts ""
+# 	
+#     incr pass_count
+# 
+# }
+# 
+# ------------------------------------------------------------
+# CLOSE CURRENT SIMULATION
+# ------------------------------------------------------------
+# 
+# quit -sim
+# }
+# 
+# =========================================
+# RUNNING TEST: ram_random_test
+# =========================================
+# 
+# vsim -c work.ram_tb_top "+TESTNAME=ram_random_test" -l logs/ram_random_test.log 
+# Start time: 00:09:42 on Jul 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# Loading sv_std.std
+# Loading work.ram_tb_top_sv_unit(fast)
+# Loading work.ram_tb_top(fast)
+# ** Error (suppressible): (vsim-8209) Virtual interface elem. 'rd_cb' not found in modport 'RD_MON'.
+#    Time: 0 ps  Iteration: 0  Region: /ram_tb_top_sv_unit File: ram_read_monitor.sv Line: 38
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./regression.tcl PAUSED at line 194
+# Compile of decoder_ram.sv was successful.
+# Compile of ram_env.sv was successful with warnings.
+# Compile of ram_generator.sv was successful with warnings.
+# Compile of ram_if.sv was successful.
+# Compile of ram_read_driver.sv was successful with warnings.
+# Compile of ram_read_monitor.sv was successful with warnings.
+# Compile of ram_ref_model.sv was successful with warnings.
+# Compile of ram_scoreboard.sv was successful with warnings.
+# Compile of ram_tb_top.sv was successful with warnings.
+# Compile of ram_test.sv was successful with warnings.
+# Compile of ram_transaction.sv was successful with warnings.
+# Compile of ram_write_driver.sv was successful with warnings.
+# Compile of ram_write_monitor.sv was successful with warnings.
+# 13 compiles, 0 failed with no errors.
+do regression.tcl
+# ============================================================
+# run.do
+# Professional Regression Script for RAM Verification
+# ============================================================
+# 
+# transcript on
+# 
+# ------------------------------------------------------------
+# MODE SELECTION
+# ------------------------------------------------------------
+# regression -> runs all tests
+# single test -> set MODE to testcase name
+#
+# Example:
+#   set MODE ram_random_test
+# ------------------------------------------------------------
+# set MODE regression
+# regression
+# 
+# puts "ARGV = $argv"
+# ARGV = -gui
+# puts "MODE = $MODE"
+# MODE = regression
+# 
+# ------------------------------------------------------------
+# CREATE LOG DIRECTORY
+# ------------------------------------------------------------
+# file mkdir logs
+# 
+# ------------------------------------------------------------
+# DELETE OLD WORK LIBRARY
+# ------------------------------------------------------------
+# if {[file exists work]} {
+#     puts ""
+#     puts "========================================="
+#     puts "DELETING OLD WORK LIBRARY"
+#     puts "========================================="
+#     puts ""
+#     vdel -all -lib work
+# }
+# 
+# =========================================
+# DELETING OLD WORK LIBRARY
+# =========================================
+# 
+# 
+# ------------------------------------------------------------
+# CREATE WORK LIBRARY
+# ------------------------------------------------------------
+# vlib work
+# vmap work work
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# Modifying F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf
+# 
+# ------------------------------------------------------------
+# COMPILE FILES
+# ------------------------------------------------------------
+# puts ""
+# 
+# puts "========================================="
+# =========================================
+# puts "COMPILING FILES"
+# COMPILING FILES
+# puts "========================================="
+# =========================================
+# puts ""
+# 
+# 
+# vlog ram_if.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:01 on Jul 10,2026
+# vlog -reportprogress 300 ram_if.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:01 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog decoder_ram.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:01 on Jul 10,2026
+# vlog -reportprogress 300 decoder_ram.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling module decoder_ram
+# 
+# Top level modules:
+# 	decoder_ram
+# End time: 00:11:01 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_transaction.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:01 on Jul 10,2026
+# vlog -reportprogress 300 ram_transaction.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_transaction_sv_unit
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:01 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_generator.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:02 on Jul 10,2026
+# vlog -reportprogress 300 ram_generator.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_generator_sv_unit
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:02 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_write_driver.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:02 on Jul 10,2026
+# vlog -reportprogress 300 ram_write_driver.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_write_driver_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:02 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_read_driver.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:02 on Jul 10,2026
+# vlog -reportprogress 300 ram_read_driver.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_read_driver_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:02 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_write_monitor.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:03 on Jul 10,2026
+# vlog -reportprogress 300 ram_write_monitor.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_write_monitor_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:03 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_read_monitor.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:03 on Jul 10,2026
+# vlog -reportprogress 300 ram_read_monitor.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_read_monitor_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:03 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_ref_model.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:03 on Jul 10,2026
+# vlog -reportprogress 300 ram_ref_model.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_ref_model_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:03 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_scoreboard.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:03 on Jul 10,2026
+# vlog -reportprogress 300 ram_scoreboard.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_scoreboard_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:04 on Jul 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_env.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:04 on Jul 10,2026
+# vlog -reportprogress 300 ram_env.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_env_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:04 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ram_test.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:04 on Jul 10,2026
+# vlog -reportprogress 300 ram_test.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_test_sv_unit
+# -- Compiling interface ram_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:11:04 on Jul 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ram_tb_top.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 00:11:04 on Jul 10,2026
+# vlog -reportprogress 300 ram_tb_top.sv 
+# ** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# -- Compiling package ram_tb_top_sv_unit
+# -- Compiling interface ram_if
+# -- Compiling module decoder_ram
+# -- Compiling module ram_tb_top
+# 
+# Top level modules:
+# 	ram_tb_top
+# End time: 00:11:05 on Jul 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# puts ""
+# 
+# puts "========================================="
+# =========================================
+# puts "COMPILATION DONE"
+# COMPILATION DONE
+# puts "========================================="
+# =========================================
+# puts ""
+# 
+# 
+# 
+# ============================================================
+# REGRESSION MODE -> run every test, each in its own vsim
+# invocation so memory/state never leaks between tests.
+# ============================================================
+# if {$MODE == "regression"} {
+# 
+# ------------------------------------------------------------
+# FULL TEST LIST
+# ------------------------------------------------------------
+# set tests {
+#     ram_random_test
+#     ram_block_boundary_test
+#     ram_full_sweep_test
+# 
+#     ram_walking1_data_test
+#     ram_walking0_data_test
+# 
+#     ram_walking1_addr_test
+#     ram_walking0_addr_test
+# 
+#     ram_same_addr_overwrite_test
+#     ram_toggle_addr_test
+# 
+#     ram_checkerboard_test
+#     ram_block_isolation_test
+# 
+#     ram_allzero_test
+#     ram_allone_test
+# 
+#     ram_read_before_write_test
+#     ram_constrained_weighted_test
+# }
+# 
+#-------------------------------
+# PASS / FAIL COUNTERS 
+#-------------------------------
+# set pass_count 0
+# set fail_count 0
+# 
+#------------------------------
+# RUN ALL TESTS 
+#------------------------------
+#     foreach test $tests {
+# 
+#         puts ""
+#         puts "========================================="
+#         puts "RUNNING TEST: $test"
+#         puts "========================================="
+#         puts ""
+# 
+#------------------------------
+# LOAD DESIGN 
+#------------------------------
+# 
+#         vsim -c work.ram_tb_top \
+# 	+TESTNAME=$test \
+# 	-l logs/$test.log 
+#     }
+# 
+# ------------------------------------------------------------
+# RUN SIMULATION
+# ------------------------------------------------------------
+# 
+# IMPORTANT:
+# Using fixed runtime avoids popup issue caused by
+# $finish in older Questa versions
+# 
+# ------------------------------------------------------------
+# run 100 us
+# 
+# 
+# ------------------------------------------------------------
+# CHECK LOG FILE
+# ------------------------------------------------------------
+# 
+# set fp [open logs/$test.log r]
+# set logfile [read $fp]
+# close $fp
+# 
+# 
+# ------------------------------------------------------------
+# PASS / FAIL CHECK
+# ------------------------------------------------------------
+# 
+# if {[string match "*ERROR*" $logfile]} {
+# 
+#     puts ""
+#     puts "--------------------------------------------"
+#     puts "RESULT : FAIL"
+#     puts "TEST   : $test"
+#     puts "--------------------------------------------"
+#     puts ""
+# 
+#     incr fail_count
+# 
+# } else {
+# 
+#     puts ""
+#     puts "--------------------------------------------"
+#     puts "RESULT : PASS"
+#     puts "TEST   : $test"
+#     puts "--------------------------------------------"
+#     puts ""
+# 	
+#     incr pass_count
+# 
+# }
+# 
+# ------------------------------------------------------------
+# CLOSE CURRENT SIMULATION
+# ------------------------------------------------------------
+# 
+# quit -sim
+# }
+# 
+# =========================================
+# RUNNING TEST: ram_random_test
+# =========================================
+# 
+# vsim -c work.ram_tb_top "+TESTNAME=ram_random_test" -l logs/ram_random_test.log 
+# Start time: 00:09:42 on Jul 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+# Loading sv_std.std
+# Loading work.ram_tb_top_sv_unit(fast)
+# Loading work.ram_tb_top(fast)
+# Loading work.ram_if(fast)
+# 
+# =========================================
+# RUNNING TEST: ram_block_boundary_test
+# =========================================
+# 

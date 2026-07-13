@@ -1,0 +1,258 @@
+# ============================================================
+# run.do
+# Professional Regression Script for RAM Verification
+# ============================================================
+
+transcript on
+
+# ------------------------------------------------------------
+# MODE SELECTION
+# ------------------------------------------------------------
+# regression -> runs all tests
+# single test -> set MODE to testcase name
+#
+# Example:
+#   set MODE ram_random_test
+# ------------------------------------------------------------
+set MODE regression
+
+puts "ARGV = $argv"
+puts "MODE = $MODE"
+
+# ------------------------------------------------------------
+# CREATE LOG DIRECTORY
+# ------------------------------------------------------------
+file mkdir logs
+
+# ------------------------------------------------------------
+# DELETE OLD WORK LIBRARY
+# ------------------------------------------------------------
+if {[file exists work]} {
+    puts ""
+    puts "========================================="
+    puts "DELETING OLD WORK LIBRARY"
+    puts "========================================="
+    puts ""
+    vdel -all -lib work
+}
+
+# ------------------------------------------------------------
+# CREATE WORK LIBRARY
+# ------------------------------------------------------------
+vlib work
+vmap work work
+
+# ------------------------------------------------------------
+# COMPILE FILES
+# ------------------------------------------------------------
+puts ""
+puts "========================================="
+puts "COMPILING FILES"
+puts "========================================="
+puts ""
+
+vlog ram_if.sv
+vlog decoder_ram.sv
+
+vlog ram_transaction.sv
+vlog ram_generator.sv
+
+vlog ram_write_driver.sv
+vlog ram_read_driver.sv
+
+vlog ram_write_monitor.sv
+vlog ram_read_monitor.sv
+
+vlog ram_ref_model.sv
+vlog ram_scoreboard.sv
+
+vlog ram_env.sv
+vlog ram_test.sv
+
+vlog ram_tb_top.sv
+
+puts ""
+puts "========================================="
+puts "COMPILATION DONE"
+puts "========================================="
+puts ""
+
+
+# ============================================================
+# REGRESSION MODE -> run every test, each in its own vsim
+# invocation so memory/state never leaks between tests.
+# ============================================================
+if {$MODE == "regression"} {
+
+# ------------------------------------------------------------
+# FULL TEST LIST
+# ------------------------------------------------------------
+set tests {
+    ram_random_test
+    ram_block_boundary_test
+    ram_full_sweep_test
+
+    ram_walking1_data_test
+    ram_walking0_data_test
+
+    ram_walking1_addr_test
+    ram_walking0_addr_test
+
+    ram_same_addr_overwrite_test
+    ram_toggle_addr_test
+
+    ram_checkerboard_test
+    ram_block_isolation_test
+
+    ram_allzero_test
+    ram_allone_test
+
+    ram_read_before_write_test
+    ram_constrained_weighted_test
+}
+
+#-------------------------------
+# PASS / FAIL COUNTERS 
+#-------------------------------
+set pass_count 0
+set fail_count 0
+
+#------------------------------
+# RUN ALL TESTS 
+#------------------------------
+    foreach test $tests {
+
+        puts ""
+        puts "========================================="
+        puts "RUNNING TEST: $test"
+        puts "========================================="
+        puts ""
+
+#------------------------------
+# LOAD DESIGN 
+#------------------------------
+
+        vsim -c work.ram_tb_top \
+	+TESTNAME=$test \
+	-l logs/$test.log 
+    }
+
+# ------------------------------------------------------------
+# RUN SIMULATION
+# ------------------------------------------------------------
+
+# IMPORTANT:
+# Using fixed runtime avoids popup issue caused by
+# $finish in older Questa versions
+
+# ------------------------------------------------------------
+run 100 us
+
+
+# ------------------------------------------------------------
+# CHECK LOG FILE
+# ------------------------------------------------------------
+
+set fp [open logs/$test.log r]
+set logfile [read $fp]
+close $fp
+
+
+# ------------------------------------------------------------
+# PASS / FAIL CHECK
+# ------------------------------------------------------------
+
+if {[string match "*ERROR*" $logfile]} {
+
+    puts ""
+    puts "--------------------------------------------"
+    puts "RESULT : FAIL"
+    puts "TEST   : $test"
+    puts "--------------------------------------------"
+    puts ""
+
+    incr fail_count
+
+} else {
+
+    puts ""
+    puts "--------------------------------------------"
+    puts "RESULT : PASS"
+    puts "TEST   : $test"
+    puts "--------------------------------------------"
+    puts ""
+	
+    incr pass_count
+
+}
+
+# ------------------------------------------------------------
+# CLOSE CURRENT SIMULATION
+# ------------------------------------------------------------
+
+quit -sim
+}
+
+# ------------------------------------------------------------
+# FINAL SUMMARY
+# ------------------------------------------------------------
+
+puts ""
+puts "=============================================="
+puts "REGRESSION SUMMARY"
+puts "=============================================="
+
+puts "PASSED : $pass_count"
+puts "FAILED : $fail_count"
+
+set total [expr {$pass_count + $fail_count}]
+
+puts "TOTAL  : $total"
+
+puts "=============================================="
+puts ""
+
+# ============================================================
+# SINGLE TEST MODE
+# ============================================================
+
+} else {
+
+    puts ""
+    puts "=============================================="
+    puts "RUNNING SINGLE TEST"
+    puts "TEST : $MODE"
+    puts "=============================================="
+    puts ""
+
+    # ------------------------------------------------------------
+    # LOAD DESIGN
+    # ------------------------------------------------------------
+
+    vsim work.ram_tb_top\
+    +TESTNAME=$MODE \
+    -l logs/$MODE.log
+
+# ------------------------------------------------------------
+# RUN SIMULATION
+# ------------------------------------------------------------
+run 100 us
+
+# ------------------------------------------------------------
+# CLOSE SIMULATION
+# ------------------------------------------------------------
+quit -sim
+
+# ------------------------------------------------------------
+# FINAL MESSAGE
+# ------------------------------------------------------------
+
+puts ""
+puts "========================================"
+puts "RUN COMPLETED"
+puts "========================================"
+puts ""
+
+# ------------------------------------------------------------
+# EXIT QUESTA
+# ------------------------------------------------------------

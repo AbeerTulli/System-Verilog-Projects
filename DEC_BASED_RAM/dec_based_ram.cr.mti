@@ -1,0 +1,127 @@
+{F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/decoder_ram.sv} {1 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/decoder_ram.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+-- Compiling module decoder_ram
+
+Top level modules:
+	decoder_ram
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_generator.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_generator.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_generator_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_generator_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_tb_top.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_tb_top.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_tb_top_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_tb_top_sv_unit
+-- Compiling interface ram_if
+-- Compiling module decoder_ram
+-- Compiling module ram_tb_top
+
+Top level modules:
+	ram_tb_top
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_test.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_test.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_test_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_test_sv_unit
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_env.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_env.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_env_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_env_sv_unit
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_write_monitor.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_write_monitor.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_write_monitor_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_write_monitor_sv_unit
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_ref_model.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_ref_model.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_ref_model_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_ref_model_sv_unit
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_transaction.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_transaction.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_transaction.sv(7): (vlog-13233) Design unit "ram_transaction_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_transaction_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_write_driver.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_write_driver.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_write_driver_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_write_driver_sv_unit
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_if.sv} {1 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_if.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_read_driver.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_read_driver.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_read_driver_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_read_driver_sv_unit
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_read_monitor.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_read_monitor.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_read_monitor_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_read_monitor_sv_unit
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}} {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_scoreboard.sv} {2 {vlog -work work -vopt -sv -stats=none {F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/ram_scoreboard.sv}
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/dec_based_ram.mpf' is used as the ini file.
+** Warning: ram_transaction.sv(7): (vlog-13233) Design unit "ram_scoreboard_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ram_scoreboard_sv_unit
+-- Compiling interface ram_if
+
+Top level modules:
+	--none--
+
+} {} {}}

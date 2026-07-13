@@ -1,0 +1,451 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dF:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM
+T_opt
+!i145 1
+!s11d F:/STUDY/PERSONAL PROJECTS/DEC_BASED_RAM/work 0 
+!s11d ram_if 1 0 
+!s11d PROJECTS/DEC_BASED_RAM/work 1 0 
+!s11d ram_tb_top_sv_unit F:/STUDY/PERSONAL 0 
+!i144 0
+Z2 !s110 1783622465
+VneEIImz4=heVOe0a08:Vk0
+04 10 4 work ram_tb_top fast 0
+=3-e4c767796a7b-6a4feb41-80-46cc
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U3 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+OL;O;2025.2;82
+vdecoder_ram
+Z3 2ram_tb_top.sv
+Z4 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z5 DXx4 work 18 ram_tb_top_sv_unit 0 22 R]YmH:YgAz1EJc4;V=6bI0
+R2
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 HmEz:YPU8dHTPb^]>Wbi32
+IdJn[b4JkiK]hRjkB?^M:R1
+Z7 !s105 ram_tb_top_sv_unit
+S1
+R1
+Z8 w1783620078
+Z9 Fdecoder_ram.sv
+Z10 Fram_tb_top.sv
+!i122 12
+L0 6 64
+Z11 OL;L;2025.2;82
+31
+Z12 !s108 1783622464.000000
+Z13 !s107 decoder_ram.sv|ram_scoreboard.sv|ram_ref_model.sv|ram_read_monitor.sv|ram_write_monitor.sv|ram_read_driver.sv|ram_if.sv|ram_write_driver.sv|ram_generator.sv|ram_transaction.sv|ram_env.sv|ram_test.sv|ram_tb_top.sv|
+Z14 !s90 -reportprogress|300|ram_tb_top.sv|
+!i113 0
+Z15 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z16 tCvgOpt 0 defaultOptions 1085333592
+Xram_env_sv_unit
+2ram_env.sv
+Z17 !s115 ram_if
+R4
+Z18 !s110 1783622464
+V[Udc?UhdO2hG64GDVb_[L1
+r1
+!s85 0
+!i10b 1
+!s100 6KQ]8^fk3W4mD0M9cP:dA1
+I[Udc?UhdO2hG64GDVb_[L1
+!i103 1
+S1
+R1
+Z19 w1783622448
+8ram_env.sv
+Z20 Fram_env.sv
+Z21 Fram_transaction.sv
+Z22 Fram_generator.sv
+Z23 Fram_write_driver.sv
+Z24 Fram_if.sv
+Z25 Fram_read_driver.sv
+Z26 Fram_write_monitor.sv
+Z27 Fram_read_monitor.sv
+Z28 Fram_ref_model.sv
+Z29 Fram_scoreboard.sv
+!i122 10
+Z30 L0 7 0
+R11
+31
+R12
+!s107 ram_scoreboard.sv|ram_ref_model.sv|ram_read_monitor.sv|ram_write_monitor.sv|ram_read_driver.sv|ram_if.sv|ram_write_driver.sv|ram_generator.sv|ram_transaction.sv|ram_env.sv|
+!s90 -reportprogress|300|ram_env.sv|
+!i113 0
+R15
+R16
+Xram_generator_sv_unit
+2ram_generator.sv
+R4
+Z31 !s110 1783622462
+VK19CMAEM0aMi<O<0G=hTC1
+r1
+!s85 0
+!i10b 1
+!s100 3SUz@JWh<ek`enJ0b?1Gi2
+IK19CMAEM0aMi<O<0G=hTC1
+!i103 1
+S1
+R1
+w1783597487
+8ram_generator.sv
+R22
+R21
+!i122 3
+R30
+R11
+31
+Z32 !s108 1783622462.000000
+!s107 ram_transaction.sv|ram_generator.sv|
+!s90 -reportprogress|300|ram_generator.sv|
+!i113 0
+R15
+R16
+Yram_if
+R3
+R4
+R5
+R2
+R6
+r1
+!s85 0
+!i10b 1
+!s100 QozU?1b4BdlhX<;8bXN]Q2
+I53Je[PcTYhlVQCXP2VGK]1
+R7
+S1
+R1
+R8
+R24
+R10
+!i122 12
+R30
+R11
+31
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Xram_read_driver_sv_unit
+2ram_read_driver.sv
+R17
+R4
+R31
+VIA90DzHhH??o?3f=4BbQ^1
+r1
+!s85 0
+!i10b 1
+!s100 1fLBJc<H>i4aoj_43g;UG0
+IIA90DzHhH??o?3f=4BbQ^1
+!i103 1
+S1
+R1
+w1783586767
+8ram_read_driver.sv
+R25
+R21
+R24
+!i122 5
+R30
+R11
+31
+R32
+!s107 ram_if.sv|ram_transaction.sv|ram_read_driver.sv|
+!s90 -reportprogress|300|ram_read_driver.sv|
+!i113 0
+R15
+R16
+Xram_read_monitor_sv_unit
+2ram_read_monitor.sv
+R17
+R4
+Z33 !s110 1783622463
+VOVd`YUafZO6Ei78f[m[Nk1
+r1
+!s85 0
+!i10b 1
+!s100 M>BZj>50YWkKT=mFQ13dz1
+IOVd`YUafZO6Ei78f[m[Nk1
+!i103 1
+S1
+R1
+R19
+8ram_read_monitor.sv
+R27
+R21
+R24
+!i122 7
+R30
+R11
+31
+Z34 !s108 1783622463.000000
+!s107 ram_if.sv|ram_transaction.sv|ram_read_monitor.sv|
+!s90 -reportprogress|300|ram_read_monitor.sv|
+!i113 0
+R15
+R16
+Xram_ref_model_sv_unit
+2ram_ref_model.sv
+R4
+R33
+V6g?izW4WH1Sz3Db5289Si2
+r1
+!s85 0
+!i10b 1
+!s100 kX8eG6@cI]3oa9ER11WhS2
+I6g?izW4WH1Sz3Db5289Si2
+!i103 1
+S1
+R1
+w1783594326
+8ram_ref_model.sv
+R28
+R21
+R24
+!i122 8
+R30
+R11
+31
+R34
+!s107 ram_if.sv|ram_transaction.sv|ram_ref_model.sv|
+!s90 -reportprogress|300|ram_ref_model.sv|
+!i113 0
+R15
+R16
+Xram_scoreboard_sv_unit
+2ram_scoreboard.sv
+R4
+R18
+V_`k4TBlE_j<C<Uf;<?gnD3
+r1
+!s85 0
+!i10b 1
+!s100 5Y:]I>^eILPTEd;njk2OU1
+I_`k4TBlE_j<C<Uf;<?gnD3
+!i103 1
+S1
+R1
+w1783596180
+8ram_scoreboard.sv
+R29
+R21
+R24
+!i122 9
+R30
+R11
+31
+R34
+!s107 ram_if.sv|ram_transaction.sv|ram_scoreboard.sv|
+!s90 -reportprogress|300|ram_scoreboard.sv|
+!i113 0
+R15
+R16
+vram_tb_top
+R3
+R4
+R5
+R2
+R6
+r1
+!s85 0
+!i10b 1
+!s100 `ao=KP52J:<ljbalTlm0f1
+IEFYeX;=@h0KNm:?n@U@:e0
+R7
+S1
+R1
+R8
+Z35 8ram_tb_top.sv
+R10
+!i122 12
+L0 6 211
+R11
+31
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Xram_tb_top_sv_unit
+R3
+R17
+R4
+R2
+VR]YmH:YgAz1EJc4;V=6bI0
+r1
+!s85 0
+!i10b 1
+!s100 _<HUL[X64R=cK^2JU;`X`2
+IR]YmH:YgAz1EJc4;V=6bI0
+!i103 1
+S1
+R1
+R19
+R35
+R10
+Z36 Fram_test.sv
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R9
+!i122 12
+R30
+R11
+31
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Xram_test_sv_unit
+2ram_test.sv
+R17
+R4
+R18
+VUGZ<HmXMFoB@NdKE[CCDH2
+r1
+!s85 0
+!i10b 1
+!s100 Fk[P3QQmb7`X14H9VAF@l0
+IUGZ<HmXMFoB@NdKE[CCDH2
+!i103 1
+S1
+R1
+R19
+8ram_test.sv
+R36
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+!i122 11
+R30
+R11
+31
+R12
+!s107 ram_scoreboard.sv|ram_ref_model.sv|ram_read_monitor.sv|ram_write_monitor.sv|ram_read_driver.sv|ram_if.sv|ram_write_driver.sv|ram_generator.sv|ram_transaction.sv|ram_env.sv|ram_test.sv|
+!s90 -reportprogress|300|ram_test.sv|
+!i113 0
+R15
+R16
+Xram_transaction_sv_unit
+2ram_transaction.sv
+R4
+!s110 1783622461
+VGkP>iO1fCiGQ3ijVR`f0O1
+r1
+!s85 0
+!i10b 1
+!s100 bEoJA^OW67`YE7NiG=FFF3
+IGkP>iO1fCiGQ3ijVR`f0O1
+!i103 1
+S1
+R1
+w1783576535
+8ram_transaction.sv
+R21
+!i122 2
+R30
+R11
+31
+!s108 1783622461.000000
+!s107 ram_transaction.sv|
+!s90 -reportprogress|300|ram_transaction.sv|
+!i113 0
+R15
+R16
+Xram_write_driver_sv_unit
+2ram_write_driver.sv
+R17
+R4
+R31
+VMW31^V<fLa2H:>lZHK?ki3
+r1
+!s85 0
+!i10b 1
+!s100 nIQ;6LjgO;EWH=AGoBJ3;2
+IMW31^V<fLa2H:>lZHK?ki3
+!i103 1
+S1
+R1
+w1783598188
+8ram_write_driver.sv
+R23
+R21
+R24
+!i122 4
+R30
+R11
+31
+R32
+!s107 ram_if.sv|ram_transaction.sv|ram_write_driver.sv|
+!s90 -reportprogress|300|ram_write_driver.sv|
+!i113 0
+R15
+R16
+Xram_write_monitor_sv_unit
+2ram_write_monitor.sv
+R17
+R4
+R33
+V3Z12gPhze6A_C9ePngdJY0
+r1
+!s85 0
+!i10b 1
+!s100 Pj=l1Q7m4]N;eDn0jRB0h1
+I3Z12gPhze6A_C9ePngdJY0
+!i103 1
+S1
+R1
+w1783589572
+8ram_write_monitor.sv
+R26
+R21
+R24
+!i122 6
+R30
+R11
+31
+R34
+!s107 ram_if.sv|ram_transaction.sv|ram_write_monitor.sv|
+!s90 -reportprogress|300|ram_write_monitor.sv|
+!i113 0
+R15
+R16
